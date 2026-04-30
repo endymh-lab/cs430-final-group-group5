@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact- Cooking Tutorial</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Cooking Tutorial</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+
+    <section class="page-hero">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+    </section>
+
+    <section class="contact-section">
+        <form id="contactForm" novalidate>
+
+             <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" />
+          <span class="error" id="nameError">Please enter your name</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+          <span class="error" id="emailError">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="What is this about?" />
+          <span class="error" id="subjectError">Please enter a subject</span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Your message here..."></textarea>
+          <span class="error" id="messageError">Please enter your message</span>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+        <p class="success-msg" id="successMsg">Your message has been sent.</p>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Cooking Tutorial- CS430 Group 5</p>
+</footer>
+</body>
+</html>
