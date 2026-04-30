@@ -1,5 +1,3 @@
-# cs430-final-group-group5
-Cooking tutorial Project
 # Cuisine Tutorial — An Interactive Cooking Website
 
 ## Project Description
