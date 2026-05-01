@@ -10,7 +10,7 @@ Cuisine Tutorial is an interactive multimedia web application built as a final g
 | Name | Role | Contributions |
 |------|------|---------------|
 | Endy Hernandez | Project Lead | About page, Contact page, Italian cuisine section, GitHub setup and deployment, Report |
-| Ghania Zaid | Homepage & Media | Homepage structure, North African cuisine section, images, Report |
+| Ghania Zaid | Homepage & Media | Homepage structure, Algeria cuisine section, images, Report |
 | Ashley Omoyi | CSS & Homepage | Styling, JavaScript, Korean cuisine section, Report |
 
 ## Technologies Used
