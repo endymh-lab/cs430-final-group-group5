@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North African Cuisine - Global Cuisine Explorer</title>
+    <link rel="stylesheet" href="Ghaniastyles.css">
+</head>
+<body>
+
+<header>
+    <h1>Global Cuisine Explorer</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="cuisineindex.html">Home</a></li>
+        <li><a href="cuisineindex.html#korean">Korean</a></li>
+        <li><a href="cuisineindex.html#italian">Italian</a></li>
+        <li><a href="AfricanCuisine.html">North African</a></li>
+        <li><a href="cuisineabout2.html">About</a></li>
+        <li><a href="cuisinecontact2.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="cuisine-section" id="north-african">
+        
+        <div class="cuisine-header">
+            <h2>North African Cuisine</h2>
+            <div class="flag">
+                <svg width="200" height="130" viewBox="0 0 200 130" aria-label="Flag of Algeria">
+                    <defs>
+                        <mask id="croissant-mask">
+                            <rect x="0" y="0" width="200" height="130" fill="white" />
+                            <circle cx="110" cy="65" r="24" fill="black" />
+                        </mask>
+                    </defs>
+                    <rect x="0" y="0" width="100" height="130" fill="#006233"/>
+                    <rect x="100" y="0" width="100" height="130" fill="#ffffff"/>
+                    <circle cx="100" cy="65" r="30" fill="#d21034" mask="url(#croissant-mask)"/>
+                    <polygon points="100,53 103,62 113,62 105,68 108,77 100,72 92,77 95,68 87,62 97,62" fill="#d21034" transform="translate(14, 0) rotate(18, 100, 65)"/>
+                    <rect x="0" y="0" width="200" height="130" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                </svg>
+            </div>
+            <p class="cuisine-intro">North African cuisine, often referred to as Maghrebi cuisine, is a rich culinary tapestry woven from centuries of history. Influenced by Berber, Arab, Mediterranean, and Andalusian cultures, the food of this region is famous for its bold, earthy flavors and vibrant colors. It heavily features complex spice blends like <em>Ras el Hanout</em>, alongside staples such as couscous, slow-cooked tagines, and fiery harissa.</p>
+        </div>
+
+        <div class="dishes-grid">
+            
+            <article class="dish-card">
+                <a href="chermoula.html" aria-label="View Chermoula Recipe">
+                    <img src="Chermoula.jpg" alt="A bowl of fresh red and green Chermoula relish" class="clickable-image">
+                </a>
+                <div class="dish-info">
+                    <h3><a href="chermoula.html" class="recipe-link">Chermoula (Relish)</a></h3>
+                    <p>A popular North African herbal relish made with bundles of herbs, preserved lemons, garlic, and tantalizing spices.</p>
+                    <a href="chermoula.html" class="btn recipe-btn" style="text-align: center; box-sizing: border-box;">View Recipe</a>
+                </div>
+            </article>
+
+            <article class="dish-card">
+                <a href="BeefTagine.html" aria-label="View Beef Tagine Recipe">
+                    <img src="Beef-Tagine.jpg" alt="Beef Tagine" class="clickable-image">
+                </a>
+                <div class="dish-info">
+                    <h3><a href="BeefTagine.html" class="recipe-link">Beef Tagine</a></h3>
+                    <p>Succulent beef and tender vegetables are slow-cooked to perfection with an all-star blend of aromatic herbs and spices.</p>
+                    <a href="BeefTagine.html" class="btn recipe-btn" style="text-align: center; box-sizing: border-box;">View Recipe</a>
+                </div>
+            </article>
+
+            <article class="dish-card">
+                <a href="Shakshuka.html" aria-label="View Shakshuka Recipe">
+                    <img src="Shakshuka.jpg" alt="Algerian Shakshuka with poached eggs" class="clickable-image">
+                </a>
+                <div class="dish-info">
+                    <h3><a href="Shakshuka.html" class="recipe-link">Algerian Shakshuka</a></h3>
+                    <p>A hearty breakfast dish featuring a diverse blend of North African spices, fresh vegetables, and eggs poached directly in a bold, savory tomato sauce.</p>
+                    <a href="Shakshuka.html" class="btn recipe-btn" style="text-align: center; box-sizing: border-box;">View Recipe</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="cuisine-section" id="interactive-spice-mixer">
+        <div class="cuisine-header">
+            <h2>Interactive Spice Mix Builder</h2>
+            <p class="cuisine-intro">Ras el Hanout is a complex North African spice blend. Build your custom blend below to see its heat profile!</p>
+        </div>
+        
+        <div class="interactive-form">
+            <div class="form-group" style="text-align: left;">
+                <label style="font-weight: normal; margin-bottom: 10px;"><input type="checkbox" class="spice-checkbox" value="Cumin" data-heat="2"> Cumin (Warm)</label>
+                <label style="font-weight: normal; margin-bottom: 10px;"><input type="checkbox" class="spice-checkbox" value="Coriander" data-heat="1"> Coriander (Citrusy)</label>
+                <label style="font-weight: normal; margin-bottom: 10px;"><input type="checkbox" class="spice-checkbox" value="Cayenne" data-heat="5"> Cayenne (Hot!)</label>
+                <label style="font-weight: normal; margin-bottom: 10px;"><input type="checkbox" class="spice-checkbox" value="Cinnamon" data-heat="1"> Cinnamon (Sweet)</label>
+            </div>
+            
+            <button type="button" id="mix-btn" class="btn recipe-btn">Mix My Spices</button>
+            
+            <div id="result" aria-live="polite" style="margin-top: 30px; text-align: left;">
+                <h4 style="margin-bottom: 5px;">Your Blend:</h4>
+                <p id="blend-result" style="font-weight: normal; margin-top: 0;">Select spices and click "Mix" to see your result.</p>
+                
+                <div id="heat-meter" style="width: 100%; height: 20px; background-color: #e0e0e0; border-radius: 10px; overflow: hidden; margin: 15px 0;">
+                    <div id="heat-fill" style="height: 100%; width: 0%; background-color: #0056b3; transition: width 0.4s ease-out, background-color 0.4s;"></div>
+                </div>
+                <p id="heat-label" style="font-weight: normal; margin: 0;">Heat Level: 0/10</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cuisine-section" style="text-align: center;">
+        <h2>Learn More</h2>
+        <p class="cuisine-intro">Explore more about our project or get in touch with our team.</p>
+        <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="cuisineabout2.html" class="btn">Return to About</a>
+            <a href="cuisinecontact2.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Global Cuisine Project | CS430 Final</p>
+    <p style="font-size: 12px; margin-top: 5px; color: #aaa;">All media used in this project is sourced from public domain/Creative Commons repositories.</p>
+</footer>
+
+<script src="Ghaniascript.js"></script>
+</body>
+</html>
