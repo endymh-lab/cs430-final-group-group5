@@ -1,0 +1,149 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.cuisine-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.cuisine-header h2 {
+    font-size: 2.5rem;
+    color: #008C45; /* Italian Flag Green */
+    margin-bottom: 10px;
+}
+
+/* --- THE FLAG SECTION (Centered) --- */
+.flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.flag canvas, .flag svg {
+    width: 250px;
+    height: auto;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- THE VERTICAL LAYOUT --- */
+/* We changed "dishes-grid" to be a simple vertical container */
+.dishes-grid {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers the cards on the page */
+    gap: 50px;              /* Adds space between the dishes */
+    padding: 20px;
+    max-width: 800px;       /* Keeps the page from feeling too wide */
+    margin: 0 auto;
+}
+
+/* --- INDIVIDUAL DISH CARDS --- */
+.dish-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 30px;
+    width: 100%;            
+    box-sizing: border-box; 
+}
+
+/* Image Scaling to match Korea style exactly */
+.dish-card img {
+    display: block;
+    width: 300px;           /* Specific width to match Korea */
+    max-width: 90%;         /* Keeps it safe for mobile */
+    height: auto;
+    margin: 20px auto;      /* Centers the image */
+    border-radius: 10px;
+}
+
+.dish-info h3 {
+    margin-top: 10px;
+    color: #CD212A; /* Italian Flag Red */
+    font-size: 1.8rem;
+}
+
+/* --- RECIPE SECTION --- */
+.recipe-details {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 5px solid #008C45; /* Green border for Italy theme */
+    text-align: left;              /* Keeps ingredients list easy to read */
+}
+
+.recipe-btn {
+    background-color: #008C45;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.recipe-btn:hover {
+    background-color: #005c2d;
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 600px) {
+    .dish-card img {
+        width: 250px;
+    }
+    .cuisine-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.pop-image {
+    display: block;       /* Forces the image to be a block */
+    margin-left: auto;    /* Centers on the left */
+    margin-right: auto;   /* Centers on the right */
+    
+    /* Keep your existing hover styles below */
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 1. Set the initial state of the image */
+.pop-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+    /* This makes the animation smooth instead of jumping */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* 2. Set what happens when the mouse HOVERS over it */
+.pop-image:hover {
+    transform: scale(1.08); /* This makes it pop out */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    z-index: 10; /* Ensures it stays on top of other elements */
+}
